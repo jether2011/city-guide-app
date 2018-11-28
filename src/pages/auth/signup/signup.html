@@ -1,0 +1,34 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="false" autoplay="2000" loop="true" speed="3000" effect="fade">
+    <ion-slide class="slide-background swiper-no-swiping" *ngFor="let bg of backgrounds"
+      [ngStyle]="{'background-image':'url(' + bg + ')'}">
+    </ion-slide>
+  </ion-slides>
+
+  <div class="login-container">
+    <form padding [formGroup]="signupForm" (submit)="register()" novalidate>
+      <ion-item>
+        <ion-input type="text" formControlName="firstName" placeholder="First Name" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" formControlName="lastName" placeholder="Last Name" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" formControlName="email" placeholder="Email" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" formControlName="password" placeholder="Password" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" formControlName="passwordConfirmation" placeholder="Password Confirmation" clearInput clearOnEdit="false"></ion-input>
+      </ion-item>
+      <button ion-button block outline color="light" [disabled]="!signupForm.valid" 
+        class="login-button">Register</button>
+    </form>
+  </div>
+</ion-content>

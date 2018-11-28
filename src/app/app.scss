@@ -1,16 +1,54 @@
-// http://ionicframework.com/docs/theming/
+.slide-background {
+    border-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 
+.slide-background {
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.2) !important;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+ion-slides {
+    height: 100vh;
+}
+
+.scroll-content {
+    margin-top: 0 !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.login-container {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10vw;
+    color: #fff;
+    text-align: center;
+}
+
+.login-button {
+    text-transform: uppercase;
+    border-radius: 3px !important;
+    &.activated {
+        background-color: rgba(255, 255, 255, .4) !important;
+    }
+}
+
+ion-item {
+    border-radius: 3px !important;
+    padding-left: 10px !important;
+    margin-bottom: 15px !important;
+    color: #fff !important;
+    background-color:  rgba(255, 255, 255, .4) !important;
+    font-size: 0.9em;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .4) !important;
+}
